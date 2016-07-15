@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "dbmover/dbmover": "^0.3.14"
+        "dbmover/dbmover": "^0.4.0"
     },
     "require-dev": {
         "gentry/gentry": "^0.10.2"
