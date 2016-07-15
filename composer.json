@@ -9,5 +9,20 @@
             "email": "marijn@monomelodies.nl"
         }
     ],
-    "require": {}
+    "require": {
+        "dbmover/dbmover": "^0.3.14"
+    },
+    "require-dev": {
+        "gentry/gentry": "^0.10.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dbmover\\Pgsql\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Dbmover\\Pgsql\\Test\\": "tests"
+        }
+    }
 }
