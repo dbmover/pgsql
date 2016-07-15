@@ -1,0 +1,13 @@
+{
+    "name": "dbmover/pgsql",
+    "description": "PostgreSQL vendor-specific DbMover module",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marijn Ophorst",
+            "email": "marijn@monomelodies.nl"
+        }
+    ],
+    "require": {}
+}
