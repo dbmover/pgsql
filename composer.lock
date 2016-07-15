@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d5de84adf2854c45d30c26e56f3b9610",
-    "content-hash": "3c9f95eaf02dd9e3cdc0814cf0931d5d",
+    "hash": "49dfb6cf8396843ea05a5ed692236060",
+    "content-hash": "884ca9879449e4c9bcd5c09af293426e",
     "packages": [
         {
             "name": "dariuszp/cli-progress-bar",
@@ -42,32 +42,32 @@
         },
         {
             "name": "dbmover/dbmover",
-            "version": "0.3.14",
+            "version": "0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dbmover/dbmover.git",
-                "reference": "aca3f8401ccfef724cb3c07ff3e89bd8da71f931"
+                "reference": "c48443e34ce4563b7b30ab75701676848459ffb7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dbmover/dbmover/zipball/aca3f8401ccfef724cb3c07ff3e89bd8da71f931",
-                "reference": "aca3f8401ccfef724cb3c07ff3e89bd8da71f931",
+                "url": "https://api.github.com/repos/dbmover/dbmover/zipball/c48443e34ce4563b7b30ab75701676848459ffb7",
+                "reference": "c48443e34ce4563b7b30ab75701676848459ffb7",
                 "shasum": ""
             },
             "require": {
                 "dariuszp/cli-progress-bar": "^1.0",
-                "monomelodies/kingconf": "^1.0"
+                "monomelodies/kingconf": "^1.1"
             },
             "require-dev": {
-                "monomelodies/gentry": "^0.8"
+                "gentry/gentry": "^0.10.2"
             },
             "bin": [
-                "dbmover"
+                "bin/dbmover"
             ],
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Dbmover\\": "src"
+                    "Dbmover\\Dbmover\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -81,7 +81,7 @@
                 }
             ],
             "description": "PHP-based database versioning tool",
-            "time": "2016-06-09 09:46:41"
+            "time": "2016-07-15 10:31:55"
         },
         {
             "name": "monomelodies/kingconf",
