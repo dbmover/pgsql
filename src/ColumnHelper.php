@@ -7,7 +7,7 @@ trait ColumnHelper
     /**
      * Checks whether a column is an auto_increment column.
      *
-     * @param string $column The referenced column definition.
+     * @param StdClass $column The referenced column definition.
      * @return bool
      */
     public function isSerial($column)
@@ -21,7 +21,7 @@ trait ColumnHelper
     /**
      * Checks whether a column is a primary key.
      *
-     * @param string $column The referenced column definition.
+     * @param StdClass $column The referenced column definition.
      * @return bool
      */
     public function isPrimaryKey($column)
