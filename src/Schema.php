@@ -10,7 +10,7 @@ class Schema extends Dbmover\Schema implements Regexes, Dbmover\Routines
     use ProcedureWrapper;
     use IndexHelper;
     use RoutineHelper;
-    use KeyHelper;
     use TableHelper;
+    use ColumnHelper;
 }
 

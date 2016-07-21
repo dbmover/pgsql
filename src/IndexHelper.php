@@ -4,6 +4,12 @@ namespace Dbmover\Pgsql;
 
 trait IndexHelper
 {
+    /**
+     * Returns an array of [tbl, idx] hashes with index names and the tables
+     * they were specified on.
+     *
+     * @return array Array of hashes with index information.
+     */
     public function getIndexes()
     {
         $stmt = $this->pdo->prepare(

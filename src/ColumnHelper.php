@@ -2,7 +2,7 @@
 
 namespace Dbmover\Pgsql;
 
-trait KeyHelper
+trait ColumnHelper
 {
     /**
      * Checks whether a column is an auto_increment column.
