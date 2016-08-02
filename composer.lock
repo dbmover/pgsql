@@ -42,16 +42,16 @@
         },
         {
             "name": "dbmover/dbmover",
-            "version": "0.4.0",
+            "version": "0.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dbmover/dbmover.git",
-                "reference": "c48443e34ce4563b7b30ab75701676848459ffb7"
+                "reference": "9e5a417863733a649fbff0505fc925fe4875531e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dbmover/dbmover/zipball/c48443e34ce4563b7b30ab75701676848459ffb7",
-                "reference": "c48443e34ce4563b7b30ab75701676848459ffb7",
+                "url": "https://api.github.com/repos/dbmover/dbmover/zipball/9e5a417863733a649fbff0505fc925fe4875531e",
+                "reference": "9e5a417863733a649fbff0505fc925fe4875531e",
                 "shasum": ""
             },
             "require": {
@@ -81,7 +81,7 @@
                 }
             ],
             "description": "PHP-based database versioning tool",
-            "time": "2016-07-15 10:31:55"
+            "time": "2016-07-16 15:44:01"
         },
         {
             "name": "monomelodies/kingconf",
@@ -135,16 +135,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v3.1.2",
+            "version": "v3.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "2884c26ce4c1d61aebf423a8b912950fe7c764de"
+                "reference": "1819adf2066880c7967df7180f4f662b6f0567ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/2884c26ce4c1d61aebf423a8b912950fe7c764de",
-                "reference": "2884c26ce4c1d61aebf423a8b912950fe7c764de",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/1819adf2066880c7967df7180f4f662b6f0567ac",
+                "reference": "1819adf2066880c7967df7180f4f662b6f0567ac",
                 "shasum": ""
             },
             "require": {
@@ -180,7 +180,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2016-06-29 05:41:56"
+            "time": "2016-07-17 14:02:08"
         }
     ],
     "packages-dev": [
