@@ -31,8 +31,6 @@ trait TableHelper
         foreach ($stmt->fetchAll(PDO::FETCH_ASSOC) as $column) {
             if (is_null($column['def'])) {
                 $column['def'] = 'NULL';
-            } else {
-                $column['def'] = $this->pdo->quote($column['def']);
             }
             $cols[$column['colname']] = $column;
         }
