@@ -9,7 +9,7 @@ trait RoutineHelper
         $operations = [];
         // Source: http://stackoverflow.com/questions/7622908/drop-function-without-knowing-the-number-type-of-parameters
         $stmt = $this->pdo->prepare(
-            "SELECT format('DROP FUNCTION %s(%s);',
+            "SELECT format('DROP FUNCTION %s(%s) CASCADE;',
                 oid::regproc,
                 pg_get_function_identity_arguments(oid)) the_query
             FROM pg_proc
