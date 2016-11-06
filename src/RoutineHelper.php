@@ -7,6 +7,9 @@ trait RoutineHelper
     public function dropRoutines()
     {
         $operations = [];
+        $stmt = $this->pdo->prepare("SELECT usesysid FROM pg_user WHERE usename = ?");
+        $stmt->execute([$this->user]);
+        $uid = $stmt->fetchColumn();
         // Source: http://stackoverflow.com/questions/7622908/drop-function-without-knowing-the-number-type-of-parameters
         $stmt = $this->pdo->prepare(
             "SELECT format('DROP FUNCTION %s(%s) CASCADE;',
@@ -14,10 +17,11 @@ trait RoutineHelper
                 pg_get_function_identity_arguments(oid)) the_query
             FROM pg_proc
             WHERE proname = ?
-            AND pg_function_is_visible(oid)");
+            AND pg_function_is_visible(oid)
+            AND proowner = ?");
         foreach ($this->getRoutines() as $routine) {
             if (!$this->shouldIgnore($routine['routinename'])) {
-                $stmt->execute([$routine['routinename']]);
+                $stmt->execute([$routine['routinename'], $uid]);
                 while ($query = $stmt->fetchColumn()) {
                     $operations[] = $query;
                 }
