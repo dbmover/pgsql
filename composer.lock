@@ -42,16 +42,16 @@
         },
         {
             "name": "dbmover/dbmover",
-            "version": "0.4.12",
+            "version": "0.4.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dbmover/dbmover.git",
-                "reference": "709ab9893b741d2a82225d2d32f63d12042825e7"
+                "reference": "08ac7ab7b5fbf3ec70a1953e812bd57f315fc3e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dbmover/dbmover/zipball/709ab9893b741d2a82225d2d32f63d12042825e7",
-                "reference": "709ab9893b741d2a82225d2d32f63d12042825e7",
+                "url": "https://api.github.com/repos/dbmover/dbmover/zipball/08ac7ab7b5fbf3ec70a1953e812bd57f315fc3e5",
+                "reference": "08ac7ab7b5fbf3ec70a1953e812bd57f315fc3e5",
                 "shasum": ""
             },
             "require": {
@@ -81,7 +81,7 @@
                 }
             ],
             "description": "PHP-based database versioning tool",
-            "time": "2016-11-07 11:34:24"
+            "time": "2016-11-07 11:42:17"
         },
         {
             "name": "monomelodies/kingconf",
