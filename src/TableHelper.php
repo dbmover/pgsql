@@ -36,5 +36,19 @@ trait TableHelper
         }
         return $cols;
     }
+
+    public function dropViews()
+    {
+        $stmt = $this->pdo->prepare(
+            "SELECT 1 FROM pg_views WHERE viewname = ? AND viewowner = ?");
+        foreach ($this->getTables('VIEW') as $view) {
+            if (!$this->shouldIgnore($view)) {
+                $stmt->execute([$view, $this->user]);
+                if ($stmt->fetchColumn()) {
+                    $operations[] = "DROP VIEW IF EXISTS $view";
+                }
+            }
+        }
+    }
 }
 
