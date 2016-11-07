@@ -49,6 +49,7 @@ trait TableHelper
                 }
             }
         }
+        return $operations;
     }
 }
 
