@@ -39,6 +39,7 @@ trait TableHelper
 
     public function dropViews()
     {
+        $operations = [];
         $stmt = $this->pdo->prepare(
             "SELECT 1 FROM pg_views WHERE viewname = ? AND viewowner = ?");
         foreach ($this->getTables('VIEW') as $view) {
