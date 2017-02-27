@@ -7,6 +7,8 @@ use PDO;
 
 class Schema extends Dbmover\Schema implements Regexes, Dbmover\Routines
 {
+    use Helper\Procedure;
+
     /**
      * Get an array of all table names in this database.
      *
