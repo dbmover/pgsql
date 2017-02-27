@@ -28,6 +28,7 @@ CREATE TABLE test (
 );
 EOT
         );
+        putenv("DBMOVER_VENDOR=Pgsql");
     }
 
     /**
