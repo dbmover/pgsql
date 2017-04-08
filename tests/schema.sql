@@ -7,7 +7,7 @@ CREATE TABLE test (
     foo VARCHAR(255) DEFAULT 'buzz'
 );
 
-CREATE INDEX ON test(bar);
+CREATE INDEX test_bar_idx ON test(bar);
 
 CREATE FUNCTION test_before_insert() RETURNS "trigger" AS $$
 BEGIN
