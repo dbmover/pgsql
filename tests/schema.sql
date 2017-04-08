@@ -7,7 +7,7 @@ CREATE TABLE test (
     foo VARCHAR(255) DEFAULT 'buzz'
 );
 
-CREATE INDEX test_bar_idx ON test(bar);
+CREATE INDEX ON test(bar);
 
 CREATE FUNCTION test_before_insert() RETURNS "trigger" AS $$
 BEGIN
@@ -18,7 +18,7 @@ $$ LANGUAGE 'plpgsql';
 CREATE TRIGGER test_before_insert BEFORE INSERT ON test FOR EACH ROW EXECUTE PROCEDURE test_before_insert();
 
 IF NOT EXISTS (SELECT 1 FROM test WHERE id = 1) THEN
-    INSERT INTO test VALUES (1, 2, NULL, 'foo');
+    INSERT INTO test (bar, foo) VALUES (2, 'foo');
 END IF;
 
 CREATE VIEW viewtest AS SELECT * FROM test;
