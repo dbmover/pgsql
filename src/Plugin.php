@@ -18,7 +18,6 @@ class Plugin extends Core\Plugin
     {
         parent::__construct($loader);
         $loader->loadPlugins(
-            Conditionals\Plugin::class,
             Views\Plugin::class,
             Procedures\Plugin::class,
             Indexes\Plugin::class,
