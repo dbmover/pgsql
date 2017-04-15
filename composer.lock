@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "84e75d4f0b201550e4bd894bccc23b2b",
-    "content-hash": "2dde1b082e082e625f4a8df361d03fb0",
+    "hash": "fb6563fbc2d80ff48ca9f1603e32d201",
+    "content-hash": "8c69d2fe7bd2274e85a78c0789f4cd7c",
     "packages": [
         {
             "name": "dariuszp/cli-progress-bar",
@@ -41,17 +41,48 @@
             "time": "2015-11-02 14:38:59"
         },
         {
-            "name": "dbmover/dbmover",
-            "version": "0.5.0",
+            "name": "dbmover/constraints",
+            "version": "0.6.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/dbmover/dbmover.git",
-                "reference": "0dd879a5a7332c60d476d6c3415a6dd89b81f6c2"
+                "url": "https://github.com/dbmover/constraints.git",
+                "reference": "3c482a0a3b6b4f90a9326d9a1bcbf5cdd1303f23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dbmover/dbmover/zipball/0dd879a5a7332c60d476d6c3415a6dd89b81f6c2",
-                "reference": "0dd879a5a7332c60d476d6c3415a6dd89b81f6c2",
+                "url": "https://api.github.com/repos/dbmover/constraints/zipball/3c482a0a3b6b4f90a9326d9a1bcbf5cdd1303f23",
+                "reference": "3c482a0a3b6b4f90a9326d9a1bcbf5cdd1303f23",
+                "shasum": ""
+            },
+            "require": {
+                "dbmover/core": "^0.6.0"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marijn Ophorst",
+                    "email": "marijn@monomelodies.nl"
+                }
+            ],
+            "description": "Dbmover plugin for dropping all constraints prior to operations",
+            "time": "2017-04-15 05:00:24"
+        },
+        {
+            "name": "dbmover/core",
+            "version": "0.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dbmover/core.git",
+                "reference": "f7e9972b9779456fb113ad30fb12a55d1688fcbb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dbmover/core/zipball/f7e9972b9779456fb113ad30fb12a55d1688fcbb",
+                "reference": "f7e9972b9779456fb113ad30fb12a55d1688fcbb",
                 "shasum": ""
             },
             "require": {
@@ -67,7 +98,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Dbmover\\Dbmover\\": "src"
+                    "Dbmover\\Core\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -80,8 +111,278 @@
                     "email": "marijn@monomelodies.nl"
                 }
             ],
-            "description": "PHP-based database versioning tool",
-            "time": "2017-02-27 11:15:03"
+            "description": "PHP-based database versioning tool, core components",
+            "time": "2017-04-08 14:58:17"
+        },
+        {
+            "name": "dbmover/pgsql-conditionals",
+            "version": "0.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dbmover/pgsql-conditionals.git",
+                "reference": "b9c4ace74fcb6ab3943183a85a46ec7efa5c75f3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dbmover/pgsql-conditionals/zipball/b9c4ace74fcb6ab3943183a85a46ec7efa5c75f3",
+                "reference": "b9c4ace74fcb6ab3943183a85a46ec7efa5c75f3",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marijn Ophorst",
+                    "email": "marijn@monomelodies.nl"
+                }
+            ],
+            "description": "Dbmover plugin for wrapping PostgreSQL conditionals in a \"lamba\"",
+            "time": "2017-04-08 15:10:49"
+        },
+        {
+            "name": "dbmover/pgsql-constraints",
+            "version": "0.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dbmover/pgsql-constraints.git",
+                "reference": "fa6892deabcad8b54322944b99515eb483af3cc2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dbmover/pgsql-constraints/zipball/fa6892deabcad8b54322944b99515eb483af3cc2",
+                "reference": "fa6892deabcad8b54322944b99515eb483af3cc2",
+                "shasum": ""
+            },
+            "require": {
+                "dbmover/constraints": "^0.6.0"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marijn Ophorst",
+                    "email": "marijn@monomelodies.nl"
+                }
+            ],
+            "description": "Dbmover plugin for (re)creating PostgreSQL constraints",
+            "time": "2017-04-15 04:52:30"
+        },
+        {
+            "name": "dbmover/pgsql-indexes",
+            "version": "0.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dbmover/pgsql-indexes.git",
+                "reference": "b4dbaefd9ee099e8288393bb9f8dfc3a3b4c3026"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dbmover/pgsql-indexes/zipball/b4dbaefd9ee099e8288393bb9f8dfc3a3b4c3026",
+                "reference": "b4dbaefd9ee099e8288393bb9f8dfc3a3b4c3026",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marijn Ophorst",
+                    "email": "marijn@monomelodies.nl"
+                }
+            ],
+            "description": "Dbmover plugin for PostgreSQL-specific index handling",
+            "time": "2017-04-10 14:47:21"
+        },
+        {
+            "name": "dbmover/pgsql-procedures",
+            "version": "0.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dbmover/pgsql-procedures.git",
+                "reference": "e0959f05b28fbf59cd42e44d56835f134bb85374"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dbmover/pgsql-procedures/zipball/e0959f05b28fbf59cd42e44d56835f134bb85374",
+                "reference": "e0959f05b28fbf59cd42e44d56835f134bb85374",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marijn Ophorst",
+                    "email": "marijn@monomelodies.nl"
+                }
+            ],
+            "description": "Dbmover plugin for (re)creating PostgreSQL procedures",
+            "time": "2017-04-10 14:47:45"
+        },
+        {
+            "name": "dbmover/pgsql-sequences",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dbmover/pgsql-sequences.git",
+                "reference": "23f62b094358d18e50c3a19d78cd771bff4167d2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dbmover/pgsql-sequences/zipball/23f62b094358d18e50c3a19d78cd771bff4167d2",
+                "reference": "23f62b094358d18e50c3a19d78cd771bff4167d2",
+                "shasum": ""
+            },
+            "require": {
+                "dbmover/core": "^0.6.0"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marijn Ophorst",
+                    "email": "marijn@monomelodies.nl"
+                }
+            ],
+            "description": "Dbmover plugin to handle PostgreSQL sequences",
+            "time": "2017-04-15 05:07:55"
+        },
+        {
+            "name": "dbmover/pgsql-tables",
+            "version": "0.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dbmover/pgsql-tables.git",
+                "reference": "f15783ff18d75f701976c821416f49c2a2c9f5e5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dbmover/pgsql-tables/zipball/f15783ff18d75f701976c821416f49c2a2c9f5e5",
+                "reference": "f15783ff18d75f701976c821416f49c2a2c9f5e5",
+                "shasum": ""
+            },
+            "require": {
+                "dbmover/tables": "^0.6.0"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marijn Ophorst",
+                    "email": "marijn@monomelodies.nl"
+                }
+            ],
+            "description": "Dbmover plugin to modify existing tables in PostgreSQL",
+            "time": "2017-04-15 05:20:58"
+        },
+        {
+            "name": "dbmover/pgsql-triggers",
+            "version": "0.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dbmover/pgsql-triggers.git",
+                "reference": "0bcb9ac575e989dc9cda22b98805bf15c6443e16"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dbmover/pgsql-triggers/zipball/0bcb9ac575e989dc9cda22b98805bf15c6443e16",
+                "reference": "0bcb9ac575e989dc9cda22b98805bf15c6443e16",
+                "shasum": ""
+            },
+            "require": {
+                "dbmover/core": "^0.6.0"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marijn Ophorst",
+                    "email": "marijn@monomelodies.nl"
+                }
+            ],
+            "description": "Dbmover plugin for PostgreSQL-specific trigger (re)creation",
+            "time": "2017-04-15 05:03:59"
+        },
+        {
+            "name": "dbmover/tables",
+            "version": "0.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dbmover/tables.git",
+                "reference": "e06d02b6066d2c47c38dc19564a8142c6e818ec6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dbmover/tables/zipball/e06d02b6066d2c47c38dc19564a8142c6e818ec6",
+                "reference": "e06d02b6066d2c47c38dc19564a8142c6e818ec6",
+                "shasum": ""
+            },
+            "require": {
+                "dbmover/core": "^0.6.0"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marijn Ophorst",
+                    "email": "marijn@monomelodies.nl"
+                }
+            ],
+            "description": "Dbmover plugin to migrate table definitions",
+            "time": "2017-04-15 05:14:28"
+        },
+        {
+            "name": "dbmover/views",
+            "version": "0.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dbmover/views.git",
+                "reference": "33201040cc44b6dabfee70c8004cf192ae5dc7e4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dbmover/views/zipball/33201040cc44b6dabfee70c8004cf192ae5dc7e4",
+                "reference": "33201040cc44b6dabfee70c8004cf192ae5dc7e4",
+                "shasum": ""
+            },
+            "require": {
+                "dbmover/core": "^0.6.0"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marijn Ophorst",
+                    "email": "marijn@monomelodies.nl"
+                }
+            ],
+            "description": "Dbmover plugin to (re)create all views",
+            "time": "2017-04-08 16:10:33"
         },
         {
             "name": "monomelodies/kingconf",
@@ -135,16 +436,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v3.2.4",
+            "version": "v3.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "9724c684646fcb5387d579b4bfaa63ee0b0c64c8"
+                "reference": "62b4cdb99d52cb1ff253c465eb1532a80cebb621"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/9724c684646fcb5387d579b4bfaa63ee0b0c64c8",
-                "reference": "9724c684646fcb5387d579b4bfaa63ee0b0c64c8",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/62b4cdb99d52cb1ff253c465eb1532a80cebb621",
+                "reference": "62b4cdb99d52cb1ff253c465eb1532a80cebb621",
                 "shasum": ""
             },
             "require": {
@@ -186,7 +487,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2017-02-16 22:46:52"
+            "time": "2017-03-20 09:45:15"
         }
     ],
     "packages-dev": [
