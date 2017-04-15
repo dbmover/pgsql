@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "dbmover/dbmover": "^0.5.0",
+        "dbmover/core": "^0.6.0",
         "dbmover/pgsql-conditionals": "^0.6.0",
         "dbmover/views": "^0.6.1",
         "dbmover/pgsql-procedures": "^0.6.0",
