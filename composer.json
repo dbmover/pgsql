@@ -19,6 +19,9 @@
         "dbmover/pgsql-sequences": "^0.1.0",
         "dbmover/pgsql-tables": "^0.6.0"
     },
+    "suggest": {
+        "dbmover/pgsql-conditionals": "SQL extension to allow conditional statements in your schemas"
+    },
     "require-dev": {
         "gentry/gentry": "^0.10.2"
     },
