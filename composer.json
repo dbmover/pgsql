@@ -10,7 +10,15 @@
         }
     ],
     "require": {
-        "dbmover/dbmover": "^0.5.0"
+        "dbmover/dbmover": "^0.5.0",
+        "dbmover/pgsql-conditionals": "^0.6.0",
+        "dbmover/views": "^0.6.1",
+        "dbmover/pgsql-procedures": "^0.6.0",
+        "dbmover/pgsql-indexes": "^0.6.0",
+        "dbmover/pgsql-constraints": "^0.6.0",
+        "dbmover/pgsql-triggers": "^0.6.0",
+        "dbmover/pgsql-sequences": "^0.1.0",
+        "dbmover/pgsql-tables": "^0.6.0"
     },
     "require-dev": {
         "gentry/gentry": "^0.10.2"
