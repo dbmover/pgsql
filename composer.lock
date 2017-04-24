@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d3fc7173b782205d7a3e7cd15f395a0e",
-    "content-hash": "ec22702f921abc33ee56d901e85fee04",
+    "hash": "b9b56665c6ce8d3d47be4f2f6510b17d",
+    "content-hash": "d00642632bb9583f5cd8751f30d1ff7d",
     "packages": [
         {
             "name": "dbmover/constraints",
-            "version": "0.6.2",
+            "version": "0.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dbmover/constraints.git",
-                "reference": "ff312414532c9e59d41cd1ebfb8a560482139cbd"
+                "reference": "58d28f795da96cbd2a7958483c4bfe20e8df9c8c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dbmover/constraints/zipball/ff312414532c9e59d41cd1ebfb8a560482139cbd",
-                "reference": "ff312414532c9e59d41cd1ebfb8a560482139cbd",
+                "url": "https://api.github.com/repos/dbmover/constraints/zipball/58d28f795da96cbd2a7958483c4bfe20e8df9c8c",
+                "reference": "58d28f795da96cbd2a7958483c4bfe20e8df9c8c",
                 "shasum": ""
             },
             "require": {
@@ -41,20 +41,20 @@
                 }
             ],
             "description": "Dbmover plugin for dropping all constraints prior to operations",
-            "time": "2017-04-15 06:54:12"
+            "time": "2017-04-15 15:57:11"
         },
         {
             "name": "dbmover/core",
-            "version": "0.6.1",
+            "version": "0.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dbmover/core.git",
-                "reference": "113efe3abcc280ed3db43a45b2373468186fc292"
+                "reference": "25243cd98db75d0b18b3507a0764a1038e62ae6d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dbmover/core/zipball/113efe3abcc280ed3db43a45b2373468186fc292",
-                "reference": "113efe3abcc280ed3db43a45b2373468186fc292",
+                "url": "https://api.github.com/repos/dbmover/core/zipball/25243cd98db75d0b18b3507a0764a1038e62ae6d",
+                "reference": "25243cd98db75d0b18b3507a0764a1038e62ae6d",
                 "shasum": ""
             },
             "require": {
@@ -83,20 +83,20 @@
                 }
             ],
             "description": "PHP-based database versioning tool, core components",
-            "time": "2017-04-15 05:58:28"
+            "time": "2017-04-16 12:36:02"
         },
         {
             "name": "dbmover/indexes",
-            "version": "0.6.0",
+            "version": "0.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dbmover/indexes.git",
-                "reference": "f982ddeeef62bff5ad4857c436cf5608f6d0fb16"
+                "reference": "cb5fcf2598f3b3f1736a53f2a72e73a13add7d83"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dbmover/indexes/zipball/f982ddeeef62bff5ad4857c436cf5608f6d0fb16",
-                "reference": "f982ddeeef62bff5ad4857c436cf5608f6d0fb16",
+                "url": "https://api.github.com/repos/dbmover/indexes/zipball/cb5fcf2598f3b3f1736a53f2a72e73a13add7d83",
+                "reference": "cb5fcf2598f3b3f1736a53f2a72e73a13add7d83",
                 "shasum": ""
             },
             "require": {
@@ -119,20 +119,20 @@
                 }
             ],
             "description": "Dbmover plugin to migrate indexes",
-            "time": "2017-04-15 06:15:38"
+            "time": "2017-04-17 06:21:37"
         },
         {
             "name": "dbmover/pgsql-constraints",
-            "version": "0.6.1",
+            "version": "0.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dbmover/pgsql-constraints.git",
-                "reference": "f363996e3cc34d0d3d85ef2a9780a130b7d53346"
+                "reference": "80749b57b8011655f87d30c7c3a26794910407bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dbmover/pgsql-constraints/zipball/f363996e3cc34d0d3d85ef2a9780a130b7d53346",
-                "reference": "f363996e3cc34d0d3d85ef2a9780a130b7d53346",
+                "url": "https://api.github.com/repos/dbmover/pgsql-constraints/zipball/80749b57b8011655f87d30c7c3a26794910407bf",
+                "reference": "80749b57b8011655f87d30c7c3a26794910407bf",
                 "shasum": ""
             },
             "require": {
@@ -155,20 +155,20 @@
                 }
             ],
             "description": "Dbmover plugin for (re)creating PostgreSQL constraints",
-            "time": "2017-04-15 06:51:26"
+            "time": "2017-04-17 06:29:27"
         },
         {
             "name": "dbmover/pgsql-indexes",
-            "version": "0.6.1",
+            "version": "0.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dbmover/pgsql-indexes.git",
-                "reference": "d786ced6a967d1da3809db9ce1e05397fc526894"
+                "reference": "f5e85bf4fd9ff5a4b84433c248b4bdef1a69ae8c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dbmover/pgsql-indexes/zipball/d786ced6a967d1da3809db9ce1e05397fc526894",
-                "reference": "d786ced6a967d1da3809db9ce1e05397fc526894",
+                "url": "https://api.github.com/repos/dbmover/pgsql-indexes/zipball/f5e85bf4fd9ff5a4b84433c248b4bdef1a69ae8c",
+                "reference": "f5e85bf4fd9ff5a4b84433c248b4bdef1a69ae8c",
                 "shasum": ""
             },
             "require": {
@@ -191,20 +191,20 @@
                 }
             ],
             "description": "Dbmover plugin for PostgreSQL-specific index handling",
-            "time": "2017-04-15 06:46:00"
+            "time": "2017-04-17 06:30:53"
         },
         {
             "name": "dbmover/pgsql-procedures",
-            "version": "0.6.2",
+            "version": "0.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dbmover/pgsql-procedures.git",
-                "reference": "5ae650ab0f4db02aff7383e08259e8bba2246cf6"
+                "reference": "e74bc4a27aa30c43ebae465d180a3616d63978fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dbmover/pgsql-procedures/zipball/5ae650ab0f4db02aff7383e08259e8bba2246cf6",
-                "reference": "5ae650ab0f4db02aff7383e08259e8bba2246cf6",
+                "url": "https://api.github.com/repos/dbmover/pgsql-procedures/zipball/e74bc4a27aa30c43ebae465d180a3616d63978fe",
+                "reference": "e74bc4a27aa30c43ebae465d180a3616d63978fe",
                 "shasum": ""
             },
             "require": {
@@ -227,20 +227,20 @@
                 }
             ],
             "description": "Dbmover plugin for (re)creating PostgreSQL procedures",
-            "time": "2017-04-15 06:42:51"
+            "time": "2017-04-16 05:45:12"
         },
         {
             "name": "dbmover/pgsql-sequences",
-            "version": "0.1.1",
+            "version": "0.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dbmover/pgsql-sequences.git",
-                "reference": "b7aec1a563177cf1b3dfcbac3781103d10ca2587"
+                "reference": "da10b11ef19896973ffd7357d5587d0c9668243d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dbmover/pgsql-sequences/zipball/b7aec1a563177cf1b3dfcbac3781103d10ca2587",
-                "reference": "b7aec1a563177cf1b3dfcbac3781103d10ca2587",
+                "url": "https://api.github.com/repos/dbmover/pgsql-sequences/zipball/da10b11ef19896973ffd7357d5587d0c9668243d",
+                "reference": "da10b11ef19896973ffd7357d5587d0c9668243d",
                 "shasum": ""
             },
             "require": {
@@ -263,20 +263,20 @@
                 }
             ],
             "description": "Dbmover plugin to handle PostgreSQL sequences",
-            "time": "2017-04-15 06:58:15"
+            "time": "2017-04-17 06:33:44"
         },
         {
             "name": "dbmover/pgsql-tables",
-            "version": "0.6.1",
+            "version": "0.6.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dbmover/pgsql-tables.git",
-                "reference": "a1032e172bfcef0c2cbd4f87bc99795b13f3e902"
+                "reference": "93afb40faa05bc3b99116d7a08fa7bbab6304565"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dbmover/pgsql-tables/zipball/a1032e172bfcef0c2cbd4f87bc99795b13f3e902",
-                "reference": "a1032e172bfcef0c2cbd4f87bc99795b13f3e902",
+                "url": "https://api.github.com/repos/dbmover/pgsql-tables/zipball/93afb40faa05bc3b99116d7a08fa7bbab6304565",
+                "reference": "93afb40faa05bc3b99116d7a08fa7bbab6304565",
                 "shasum": ""
             },
             "require": {
@@ -299,7 +299,7 @@
                 }
             ],
             "description": "Dbmover plugin to modify existing tables in PostgreSQL",
-            "time": "2017-04-15 07:00:12"
+            "time": "2017-04-17 07:34:03"
         },
         {
             "name": "dbmover/pgsql-triggers",
@@ -339,20 +339,20 @@
         },
         {
             "name": "dbmover/procedures",
-            "version": "0.6.0",
+            "version": "0.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dbmover/procedures.git",
-                "reference": "e88bc728272f5e51b7fa1124b1e85afa241a7ece"
+                "reference": "c6e84c17b1a7fafc5f7083bdb35fcbee36f2deb5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dbmover/procedures/zipball/e88bc728272f5e51b7fa1124b1e85afa241a7ece",
-                "reference": "e88bc728272f5e51b7fa1124b1e85afa241a7ece",
+                "url": "https://api.github.com/repos/dbmover/procedures/zipball/c6e84c17b1a7fafc5f7083bdb35fcbee36f2deb5",
+                "reference": "c6e84c17b1a7fafc5f7083bdb35fcbee36f2deb5",
                 "shasum": ""
             },
             "require": {
-                "dbmover/core": "^0.6.1"
+                "dbmover/core": "^0.6.2"
             },
             "type": "library",
             "autoload": {
@@ -371,20 +371,20 @@
                 }
             ],
             "description": "Dbmover plugin to (re)create procedures",
-            "time": "2017-04-15 06:36:08"
+            "time": "2017-04-16 06:36:30"
         },
         {
             "name": "dbmover/tables",
-            "version": "0.6.3",
+            "version": "0.6.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dbmover/tables.git",
-                "reference": "af81f08078fe32719f2861c7003005ebb9c6e97d"
+                "reference": "dce8903bef9465ef3e5d9a724b958c4eb376ccb7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dbmover/tables/zipball/af81f08078fe32719f2861c7003005ebb9c6e97d",
-                "reference": "af81f08078fe32719f2861c7003005ebb9c6e97d",
+                "url": "https://api.github.com/repos/dbmover/tables/zipball/dce8903bef9465ef3e5d9a724b958c4eb376ccb7",
+                "reference": "dce8903bef9465ef3e5d9a724b958c4eb376ccb7",
                 "shasum": ""
             },
             "require": {
@@ -407,20 +407,20 @@
                 }
             ],
             "description": "Dbmover plugin to migrate table definitions",
-            "time": "2017-04-15 11:20:56"
+            "time": "2017-04-17 06:39:01"
         },
         {
             "name": "dbmover/views",
-            "version": "0.6.2",
+            "version": "0.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dbmover/views.git",
-                "reference": "345c0227ecd62ec1a9ee98a5e2970fae3a8914f3"
+                "reference": "80c0d3ceb50e5b8996245145f2a6176c17a4a672"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dbmover/views/zipball/345c0227ecd62ec1a9ee98a5e2970fae3a8914f3",
-                "reference": "345c0227ecd62ec1a9ee98a5e2970fae3a8914f3",
+                "url": "https://api.github.com/repos/dbmover/views/zipball/80c0d3ceb50e5b8996245145f2a6176c17a4a672",
+                "reference": "80c0d3ceb50e5b8996245145f2a6176c17a4a672",
                 "shasum": ""
             },
             "require": {
@@ -443,7 +443,7 @@
                 }
             ],
             "description": "Dbmover plugin to (re)create all views",
-            "time": "2017-04-15 06:32:34"
+            "time": "2017-04-15 15:50:23"
         },
         {
             "name": "monomelodies/kingconf",
