@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b9b56665c6ce8d3d47be4f2f6510b17d",
-    "content-hash": "d00642632bb9583f5cd8751f30d1ff7d",
+    "hash": "37515d0fb3c79506cb6956c2166a1f1a",
+    "content-hash": "6ae9ecd5bfe88df7cab41108a5af5e07",
     "packages": [
         {
             "name": "dbmover/constraints",
@@ -45,16 +45,16 @@
         },
         {
             "name": "dbmover/core",
-            "version": "0.6.3",
+            "version": "0.6.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dbmover/core.git",
-                "reference": "25243cd98db75d0b18b3507a0764a1038e62ae6d"
+                "reference": "1004548418b7652227221599828ccb6950ffe475"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dbmover/core/zipball/25243cd98db75d0b18b3507a0764a1038e62ae6d",
-                "reference": "25243cd98db75d0b18b3507a0764a1038e62ae6d",
+                "url": "https://api.github.com/repos/dbmover/core/zipball/1004548418b7652227221599828ccb6950ffe475",
+                "reference": "1004548418b7652227221599828ccb6950ffe475",
                 "shasum": ""
             },
             "require": {
@@ -83,7 +83,7 @@
                 }
             ],
             "description": "PHP-based database versioning tool, core components",
-            "time": "2017-04-16 12:36:02"
+            "time": "2017-04-29 08:32:12"
         },
         {
             "name": "dbmover/indexes",
@@ -303,20 +303,21 @@
         },
         {
             "name": "dbmover/pgsql-triggers",
-            "version": "0.6.1",
+            "version": "0.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dbmover/pgsql-triggers.git",
-                "reference": "dc4fa4fd3de3b3577e53625deadb04e6a5d81a75"
+                "reference": "811d720898c0fe9b2739b4569312e405438e8dde"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dbmover/pgsql-triggers/zipball/dc4fa4fd3de3b3577e53625deadb04e6a5d81a75",
-                "reference": "dc4fa4fd3de3b3577e53625deadb04e6a5d81a75",
+                "url": "https://api.github.com/repos/dbmover/pgsql-triggers/zipball/811d720898c0fe9b2739b4569312e405438e8dde",
+                "reference": "811d720898c0fe9b2739b4569312e405438e8dde",
                 "shasum": ""
             },
             "require": {
-                "dbmover/core": "^0.6.0"
+                "dbmover/core": "^0.6.2",
+                "dbmover/pgsql-procedures": "^0.6.3"
             },
             "type": "library",
             "autoload": {
@@ -335,20 +336,20 @@
                 }
             ],
             "description": "Dbmover plugin for PostgreSQL-specific trigger (re)creation",
-            "time": "2017-04-15 06:56:12"
+            "time": "2017-04-24 14:42:25"
         },
         {
             "name": "dbmover/procedures",
-            "version": "0.6.1",
+            "version": "0.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dbmover/procedures.git",
-                "reference": "c6e84c17b1a7fafc5f7083bdb35fcbee36f2deb5"
+                "reference": "482bacc4635b929a08d82e7e05fc1bf5ed5415db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dbmover/procedures/zipball/c6e84c17b1a7fafc5f7083bdb35fcbee36f2deb5",
-                "reference": "c6e84c17b1a7fafc5f7083bdb35fcbee36f2deb5",
+                "url": "https://api.github.com/repos/dbmover/procedures/zipball/482bacc4635b929a08d82e7e05fc1bf5ed5415db",
+                "reference": "482bacc4635b929a08d82e7e05fc1bf5ed5415db",
                 "shasum": ""
             },
             "require": {
@@ -371,7 +372,7 @@
                 }
             ],
             "description": "Dbmover plugin to (re)create procedures",
-            "time": "2017-04-16 06:36:30"
+            "time": "2017-04-26 05:03:11"
         },
         {
             "name": "dbmover/tables",
@@ -497,16 +498,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v3.2.7",
+            "version": "v3.2.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "62b4cdb99d52cb1ff253c465eb1532a80cebb621"
+                "reference": "acec26fcf7f3031e094e910b94b002fa53d4e4d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/62b4cdb99d52cb1ff253c465eb1532a80cebb621",
-                "reference": "62b4cdb99d52cb1ff253c465eb1532a80cebb621",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/acec26fcf7f3031e094e910b94b002fa53d4e4d6",
+                "reference": "acec26fcf7f3031e094e910b94b002fa53d4e4d6",
                 "shasum": ""
             },
             "require": {
@@ -548,7 +549,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2017-03-20 09:45:15"
+            "time": "2017-05-01 14:55:58"
         }
     ],
     "packages-dev": [
