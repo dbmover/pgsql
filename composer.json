@@ -10,14 +10,14 @@
         }
     ],
     "require": {
-        "dbmover/core": "^0.6.0",
-        "dbmover/views": "^0.6.1",
-        "dbmover/pgsql-procedures": "^0.6.0",
-        "dbmover/pgsql-indexes": "^0.6.0",
-        "dbmover/pgsql-constraints": "^0.6.0",
-        "dbmover/pgsql-triggers": "^0.6.0",
+        "dbmover/core": "^0.6.4",
+        "dbmover/views": "^0.6.3",
+        "dbmover/pgsql-procedures": "^0.6.2",
+        "dbmover/pgsql-indexes": "^0.6.3",
+        "dbmover/pgsql-constraints": "^0.6.3",
+        "dbmover/pgsql-triggers": "^0.6.3",
         "dbmover/pgsql-sequences": "^0.2.2",
-        "dbmover/pgsql-tables": "^0.6.0"
+        "dbmover/pgsql-tables": "^0.6.4"
     },
     "suggest": {
         "dbmover/pgsql-conditionals": "SQL extension to allow conditional statements in your schemas"
