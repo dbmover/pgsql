@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6ca185e4941848a8ecb7d00670315c86",
-    "content-hash": "f65e5569b2e0cd1ec99895809841a288",
+    "hash": "7ed305ee501938c951ad6ab08f3d4876",
+    "content-hash": "9488b6bf7e90d7ab0f370156e632fa3d",
     "packages": [
         {
             "name": "dbmover/constraints",
@@ -279,20 +279,21 @@
         },
         {
             "name": "dbmover/pgsql-tables",
-            "version": "0.6.5",
+            "version": "0.6.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dbmover/pgsql-tables.git",
-                "reference": "f30d1120ae18fb17041d7d3698a856a73fc01ec8"
+                "reference": "4195e2a375ae8d24621a9e058f9612ceb606a393"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dbmover/pgsql-tables/zipball/f30d1120ae18fb17041d7d3698a856a73fc01ec8",
-                "reference": "f30d1120ae18fb17041d7d3698a856a73fc01ec8",
+                "url": "https://api.github.com/repos/dbmover/pgsql-tables/zipball/4195e2a375ae8d24621a9e058f9612ceb606a393",
+                "reference": "4195e2a375ae8d24621a9e058f9612ceb606a393",
                 "shasum": ""
             },
             "require": {
-                "dbmover/tables": "^0.6.0"
+                "dbmover/tables": "^0.6.5",
+                "php": ">=7.2"
             },
             "type": "library",
             "autoload": {
@@ -311,7 +312,7 @@
                 }
             ],
             "description": "Dbmover plugin to modify existing tables in PostgreSQL",
-            "time": "2017-05-20 09:33:20"
+            "time": "2018-03-24 09:02:15"
         },
         {
             "name": "dbmover/pgsql-triggers",
@@ -427,19 +428,28 @@
         },
         {
             "name": "dbmover/tables",
-            "version": "0.6.0",
+            "version": "0.6.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dbmover/tables.git",
-                "reference": "3a3b727879c7469a7dddbb965cbbedfdb2a41a5d"
+                "reference": "660c8bc1370b0111aa9a80266e08110df69e222c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dbmover/tables/zipball/3a3b727879c7469a7dddbb965cbbedfdb2a41a5d",
-                "reference": "3a3b727879c7469a7dddbb965cbbedfdb2a41a5d",
+                "url": "https://api.github.com/repos/dbmover/tables/zipball/660c8bc1370b0111aa9a80266e08110df69e222c",
+                "reference": "660c8bc1370b0111aa9a80266e08110df69e222c",
                 "shasum": ""
             },
+            "require": {
+                "dbmover/core": "^0.7.0",
+                "php": ">=7.2"
+            },
             "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Dbmover\\Tables\\": "./src"
+                }
+            },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
@@ -451,7 +461,7 @@
                 }
             ],
             "description": "Dbmover plugin to migrate table definitions",
-            "time": "2017-04-08 15:20:10"
+            "time": "2018-03-24 08:56:22"
         },
         {
             "name": "dbmover/views",
