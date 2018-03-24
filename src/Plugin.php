@@ -10,7 +10,6 @@
 namespace Dbmover\Pgsql;
 
 use Dbmover\Core;
-use Dbmover\Views;
 
 class Plugin extends Core\Plugin
 {
