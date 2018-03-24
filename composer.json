@@ -15,7 +15,7 @@
         "dbmover/pgsql-procedures": "^0.6.2",
         "dbmover/pgsql-indexes": "^0.6.3",
         "dbmover/pgsql-constraints": "^0.6.3",
-        "dbmover/pgsql-triggers": "^0.6.3",
+        "dbmover/pgsql-triggers": "^0.6.5",
         "dbmover/pgsql-sequences": "^0.3.0",
         "dbmover/pgsql-tables": "^0.6.4"
     },
