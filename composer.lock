@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "770177682c0f376ec02f6775f6bef045",
-    "content-hash": "b70bd721200231f7677d45bd6cd43f53",
+    "hash": "bb68b8320cf0ecbe390d754a3218d648",
+    "content-hash": "ad815595d14bf6ecdd01a308abad19eb",
     "packages": [
         {
             "name": "dbmover/constraints",
@@ -46,16 +46,16 @@
         },
         {
             "name": "dbmover/core",
-            "version": "0.7.0",
+            "version": "0.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dbmover/core.git",
-                "reference": "b94862d0a6f24ff7be859b3187cddbe52513fcc3"
+                "reference": "f760731a578a7770310599fdb57e368f0a6b1edc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dbmover/core/zipball/b94862d0a6f24ff7be859b3187cddbe52513fcc3",
-                "reference": "b94862d0a6f24ff7be859b3187cddbe52513fcc3",
+                "url": "https://api.github.com/repos/dbmover/core/zipball/f760731a578a7770310599fdb57e368f0a6b1edc",
+                "reference": "f760731a578a7770310599fdb57e368f0a6b1edc",
                 "shasum": ""
             },
             "require": {
@@ -87,7 +87,7 @@
                 }
             ],
             "description": "PHP-based database versioning tool, core components",
-            "time": "2018-03-24 07:05:17"
+            "time": "2018-03-24 16:34:39"
         },
         {
             "name": "dbmover/indexes",
@@ -168,16 +168,16 @@
         },
         {
             "name": "dbmover/pgsql-indexes",
-            "version": "0.6.4",
+            "version": "0.6.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dbmover/pgsql-indexes.git",
-                "reference": "65e26471a4c59fc634b3a21e60e143d83d5a1d3c"
+                "reference": "9c364ba2914e1b4bba6c2d8aafab63f85799f83c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dbmover/pgsql-indexes/zipball/65e26471a4c59fc634b3a21e60e143d83d5a1d3c",
-                "reference": "65e26471a4c59fc634b3a21e60e143d83d5a1d3c",
+                "url": "https://api.github.com/repos/dbmover/pgsql-indexes/zipball/9c364ba2914e1b4bba6c2d8aafab63f85799f83c",
+                "reference": "9c364ba2914e1b4bba6c2d8aafab63f85799f83c",
                 "shasum": ""
             },
             "require": {
@@ -201,7 +201,7 @@
                 }
             ],
             "description": "Dbmover plugin for PostgreSQL-specific index handling",
-            "time": "2018-03-24 08:07:15"
+            "time": "2018-03-24 16:48:58"
         },
         {
             "name": "dbmover/pgsql-procedures",
