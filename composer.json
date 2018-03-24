@@ -18,7 +18,7 @@
         "dbmover/pgsql-constraints": "^0.6.3",
         "dbmover/pgsql-triggers": "^0.6.5",
         "dbmover/pgsql-sequences": "^0.3.0",
-        "dbmover/pgsql-tables": "^0.6.4"
+        "dbmover/pgsql-tables": "^0.6.6"
     },
     "suggest": {
         "dbmover/pgsql-conditionals": "SQL extension to allow conditional statements in your schemas"
