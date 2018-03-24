@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "baf1183c62818ba6b09554950dd5420c",
-    "content-hash": "7fed06183c3c143c09b035977cff48dc",
+    "hash": "6ca185e4941848a8ecb7d00670315c86",
+    "content-hash": "f65e5569b2e0cd1ec99895809841a288",
     "packages": [
         {
             "name": "dbmover/constraints",
@@ -353,16 +353,16 @@
         },
         {
             "name": "dbmover/pgsql-views",
-            "version": "0.1.1",
+            "version": "0.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dbmover/pgsql-views.git",
-                "reference": "a2212167e95617bbd3c5a1f42a253a01ae5be74f"
+                "reference": "a8169b6231a3f4434f8cd2c7602321b4e65bc6fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dbmover/pgsql-views/zipball/a2212167e95617bbd3c5a1f42a253a01ae5be74f",
-                "reference": "a2212167e95617bbd3c5a1f42a253a01ae5be74f",
+                "url": "https://api.github.com/repos/dbmover/pgsql-views/zipball/a8169b6231a3f4434f8cd2c7602321b4e65bc6fc",
+                "reference": "a8169b6231a3f4434f8cd2c7602321b4e65bc6fc",
                 "shasum": ""
             },
             "require": {
@@ -372,7 +372,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Dbmover\\PgsqlViews\\": "./src"
+                    "Dbmover\\Pgsql\\Views\\": "./src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -386,7 +386,7 @@
                 }
             ],
             "description": "Postgresql views, also handles materialized views.",
-            "time": "2018-03-24 07:46:29"
+            "time": "2018-03-24 08:35:25"
         },
         {
             "name": "dbmover/procedures",
@@ -734,6 +734,8 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": ">=7.2"
+    },
     "platform-dev": []
 }
