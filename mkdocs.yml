@@ -4,5 +4,13 @@ repo_url: https://github.com/dbmover/pgsql
 
 pages:
 - Home:
-    - 'Quickstart': 'index.md'
-
+    - 'General documentation': 'index.md'
+- Plugins:
+    - 'Conditionals': 'conditionals.md'
+    - 'Constraints': 'constraints.md'
+    - 'Indexes': 'indexes.md'
+    - 'Procedures': 'procedures.md'
+    - 'Sequences': 'sequences.md'
+    - 'Tables': 'tables.md'
+    - 'Triggers': 'triggers.md'
+    - 'Views': 'views.md'
