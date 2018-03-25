@@ -8,12 +8,8 @@ PostgreSQL vendor-specific metapackage for DbMover
 $ composer require dbmover/pgsql
 ```
 
-No, seriously: use Composer. As of version 0.6 DbMover uses a plugin-based
-architecture where each operation is in its own package. Maintaining all these
-dependencies manually is tedious and a _lot_ of work.
-
 ## Setup and running
-See [the Dbmover README](http://dbmover.monomelodies.nl/docs/) for instructions
+See [the Dbmover README](http://dbmover.monomelodies.nl/core/docs/) for instructions
 on setting up and running DbMover.
 
 ## PostgreSQL specific notes
@@ -28,7 +24,7 @@ verbose full commands instead:
 ```sql
 CREATE SEQUENCE IF NOT EXISTS foo_id_seq;
 CREATE TABLE foo (
-    id INTEGER NOT NULL PRIMARY KEY DEFAULT NEXTVAL('foo_id_seq')
+    id INTEGER NOT NULL PRIMARY KEY DEFAULT NEXTVAL('foo_id_seq'::regclass)
 );
 ```
 
