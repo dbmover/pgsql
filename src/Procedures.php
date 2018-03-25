@@ -10,7 +10,7 @@ namespace Dbmover\Pgsql;
 use Dbmover\Core;
 use PDO;
 
-class Procedure extends Core\Plugin
+class Procedures extends Core\Plugin
 {
     const REGEX = "@^CREATE (FUNCTION|PROCEDURE).*?AS.*?LANGUAGE '.*?'(\s+(VOLATILE|STABLE|IMMUTABLE))?;$@ms";
 
