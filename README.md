@@ -37,3 +37,10 @@ exposed there). You should always run DbMover as a user with privileges for only
 the database being migrated. All plugins try their best to only work on objects
 defined as `public`, but better safe than sorry.
 
+## TODO/wishlist
+
+### Support for enums
+These are implemented in Postgres as a sort of custom data types. Support is on
+the roadmap, but since I personally never use them it's not _very_ high on my
+(annoyingly long) list of priorities :)
+
