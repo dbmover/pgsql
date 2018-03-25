@@ -11,17 +11,7 @@
     ],
     "require": {
         "php": ">=7.2",
-        "dbmover/core": "^0.8.0",
-        "dbmover/pgsql-views": "^0.1.3",
-        "dbmover/pgsql-procedures": "^0.6.2",
-        "dbmover/pgsql-indexes": "^0.6.4",
-        "dbmover/pgsql-constraints": "^0.6.3",
-        "dbmover/pgsql-triggers": "^0.6.6",
-        "dbmover/pgsql-sequences": "^0.3.1",
-        "dbmover/pgsql-tables": "^0.6.6"
-    },
-    "suggest": {
-        "dbmover/pgsql-conditionals": "SQL extension to allow conditional statements in your schemas"
+        "dbmover/core": "^0.9.0"
     },
     "require-dev": {
         "gentry/gentry": "^0.10.2"
