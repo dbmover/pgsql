@@ -28,7 +28,7 @@ class Constraints extends Core\Constraints
                 $this->dropConstraint($constraint['tbl'], $constraint['constr'], $constraint['ctype']);
             }
         }
-        foreach ($this->extractOperations("@^ALTER TABLE \S+ ADD FOREIGN KEY.*?;@ms") as $match) {
+        foreach ($this->extractOperations("@^ALTER TABLE \S+ ADD FOREIGN KEY.*?;@ms", $sql) as $match) {
             $this->defer($match[0]);
         }
         $sql = $this->spawn(Indexes::class, $sql);
