@@ -12,6 +12,8 @@ $ composer require dbmover/pgsql
 See [the Dbmover README](http://dbmover.monomelodies.nl/core/docs/) for instructions
 on setting up and running DbMover.
 
+Add the `Dbmover\Pgsql\Plugin` meta-plugin to simply use the defaults.
+
 ## PostgreSQL specific notes
 
 ### Serial primary keys
