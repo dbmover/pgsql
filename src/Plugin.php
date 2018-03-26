@@ -21,6 +21,7 @@ class Plugin extends Core\Plugin
             Procedures::class,
             Views::class,
             Constraints::class,
+            Indexes::class,
             Triggers::class,
             Sequences::class,
             Tables::class

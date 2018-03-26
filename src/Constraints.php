@@ -31,7 +31,6 @@ class Constraints extends Core\Constraints
         foreach ($this->extractOperations("@^ALTER TABLE \S+ ADD FOREIGN KEY.*?;@ms", $sql) as $match) {
             $this->defer($match[0]);
         }
-        $sql = $this->spawn(Indexes::class, $sql);
         return $sql;
     }
 
