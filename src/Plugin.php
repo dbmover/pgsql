@@ -20,8 +20,7 @@ class Plugin extends Core\Plugin
         $loader->loadPlugins(
             Procedures::class,
             Views::class,
-            Constraints::class,
-            Indexes::class,
+            IndexesAndConstraints::class,
             Triggers::class,
             Sequences::class,
             Tables::class
