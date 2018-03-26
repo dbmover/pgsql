@@ -7,8 +7,7 @@ pages:
     - 'General documentation': 'index.md'
 - Plugins:
     - 'Conditionals': 'conditionals.md'
-    - 'Constraints': 'constraints.md'
-    - 'Indexes': 'indexes.md'
+    - 'Indexes and constraints': 'indexes-and-constraints.md'
     - 'Procedures': 'procedures.md'
     - 'Sequences': 'sequences.md'
     - 'Tables': 'tables.md'
