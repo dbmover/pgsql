@@ -18,6 +18,7 @@ class Plugin extends Core\Plugin
     {
         parent::__construct($loader);
         $loader->loadPlugins(
+            Enums::class,
             Procedures::class,
             Views::class,
             IndexesAndConstraints::class,
