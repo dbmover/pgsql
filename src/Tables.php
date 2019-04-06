@@ -61,7 +61,7 @@ class Tables extends Core\Tables
         }
         $sql = [];
         if ($definition['column_type'] != $current['column_type']) {
-            $sql[] = "ALTER TABLE $table ALTER COLUMN $column TYPE {$definition['column_type']};";
+            $sql[] = "ALTER TABLE $table ALTER COLUMN $column TYPE {$definition['column_type']} USING $column::{$definition['column_type']};";
         }
         if (!is_null($current['column_default'])) {
             // Default strings are stored internally as 'string'::character varying
