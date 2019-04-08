@@ -24,7 +24,7 @@ class Enums extends Core\Views
                 column_name,
                 TABLE_NAME tbl
             FROM INFORMATION_SCHEMA.COLUMNS
-                WHERE TABLE_CATALOG = ? AND TABLE_SCHEMA = 'public' AND data_type = ?");
+                WHERE TABLE_CATALOG = ? AND TABLE_SCHEMA = 'public' AND data_type = 'USER-DEFINED' AND udt_name = ?");
     }
 
     /**
@@ -53,6 +53,21 @@ class Enums extends Core\Views
             } else {
                 $values = preg_split("@',\s+'@", substr($enum[2], 1, -1));
                 if ($values <> $enums[$name]) {
+                    $this->columns->execute([$this->loader->getDatabase(), $name]);
+                    $tables = $this->columns->fetchAll(PDO::FETCH_ASSOC);
+                    // First, cast all existing instances of the type to TEXT:
+                    foreach ($tables as $table) {
+                        $this->addOperation("ALTER TABLE {$table['tbl']}
+                            ALTER COLUMN {$table['column_name']} TYPE TEXT USING {$table['column_name']}::TEXT");
+                    }
+                    // Then recreate the type:
+                    $this->addOperation("DROP TYPE $name");
+                    $this->addOperation($enum[0]);
+                    // Finally, cast back to the intended type:
+                    foreach ($tables as $table) {
+                        $this->addOperation("ALTER TABLE {$table['tbl']}
+                            ALTER COLUMN {$table['column_name']} TYPE $name USING {$table['column_name']}::$name");
+                    }
                 }
             }
             $sql = str_replace($enum[0], '', $sql);
