@@ -49,7 +49,7 @@ class Enums extends Core\Views
         foreach ($this->extractOperations('@^CREATE\s+TYPE\s+(\w+)\s+AS\s+ENUM\s+\((.*?)\);$@ms', $sql) as $enum) {
             $name = $enum[1];
             if (!isset($enums[$name])) {
-                $this->defer($enum[0]);
+                $this->addOperation($enum[0]);
             } else {
                 $values = preg_split("@',\s+'@", substr($enum[2], 1, -1));
                 if ($values <> $enums[$name]) {
