@@ -10,7 +10,10 @@ return function () : Generator {
         $pdo = new PDO(
             'pgsql:dbname=dbmover_test',
             'dbmover_test',
-            'moveit'
+            'moveit',
+            [
+                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+            ]
         );
         $pdo->exec(
             <<<EOT
@@ -57,6 +60,13 @@ EOT
         $all = $stmt->fetchAll();
         assert(count($all) == 1);
         assert($all[0]['bar'] == 3);
+
+        $e = 0;
+        try {
+            $pdo->exec("INSERT INTO test (bar) VALUES (-10)");
+        } catch (PDOException $e) {
+        }
+        assert($e instanceof PDOException);
     };
 };
 
