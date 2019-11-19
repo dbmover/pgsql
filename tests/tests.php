@@ -1,0 +1,62 @@
+<?php
+
+use Dbmover\Core\Loader;
+
+/**
+ * Tests for PostreSQL engine.
+ */
+return function () : Generator {
+    $this->beforeEach(function () use (&$pdo) {
+        $pdo = new PDO(
+            'pgsql:dbname=dbmover_test',
+            'dbmover_test',
+            'moveit'
+        );
+        $pdo->exec(
+            <<<EOT
+DROP VIEW IF EXISTS viewtest;
+DROP TABLE IF EXISTS test;
+CREATE TABLE test (
+    id SERIAL,
+    bar INTEGER NOT NULL,
+    foo VARCHAR(255) DEFAULT 'buzz'
+);
+EOT
+        );
+        putenv("DBMOVER_VENDOR=Pgsql");
+    });
+
+    /**
+     * Initially, we have one table with three columns. After we run the migration, the database should be updated.
+     */
+    yield function () use (&$pdo) {
+        $cols = $pdo->prepare(
+            "SELECT * FROM INFORMATION_SCHEMA.COLUMNS
+                WHERE TABLE_CATALOG = 'dbmover_test'
+                AND TABLE_NAME = 'test'");
+        $cols->execute();
+        assert(count($cols->fetchAll()) == 3);
+
+        // Perform the migration...
+        $pgsql = new Loader(
+            'pgsql:dbname=dbmover_test',
+            [
+                'user' => 'dbmover_test',
+                'pass' => 'moveit',
+                'schema' => ['tests/schema.sql'],
+                'plugins' => ['Dbmover\Core\ExplicitDrop', 'Dbmover\Core\ForceNamedIndexes', 'Dbmover\Pgsql\Plugin', 'Dbmover\Core\Data', 'Dbmover\Pgsql\Conditionals'],
+            ],
+            true
+        );
+
+        $cols->execute();
+        assert(count($cols->fetchAll()) == 4);
+
+        $stmt = $pdo->prepare("SELECT * FROM viewtest");
+        $stmt->execute();
+        $all = $stmt->fetchAll();
+        assert(count($all) == 1);
+        assert($all[0]['bar'] == 3);
+    };
+};
+
