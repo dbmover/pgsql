@@ -32,12 +32,13 @@ class IndexesAndConstraints extends Core\IndexesAndConstraints
         );
         $stmt = $this->loader->getPdo()->prepare(
             "SELECT c.relname tbl, o.conname constr, o.contype ctype
-                FROM pg_constraint o JOIN pg_class c ON o.conrelid = c.oid"
+                FROM pg_constraint o JOIN pg_class c ON o.conrelid = c.oid
+                WHERE o.contype IN ('f', 'x')"
         );
         $stmt->execute();
         while (false !== ($constraint = $stmt->fetch(PDO::FETCH_ASSOC))) {
             if (!$this->loader->shouldBeIgnored($constraint['constr'])) {
-                $this->dropConstraint($constraint['tbl'], $constraint['constr'], $constraint['ctype']);
+                $this->dropConstraint($constraint['tbl'], $constraint['constr']);
             }
         }
         $sql = parent::__invoke($sql);
@@ -106,10 +107,9 @@ class IndexesAndConstraints extends Core\IndexesAndConstraints
     /**
      * @param string $table
      * @param string $constraint
-     * @param string $type
      * @return void
      */
-    protected function dropConstraint(string $table, string $constraint, string $type) : void
+    protected function dropConstraint(string $table, string $constraint) : void
     {
         if (in_array($type, ['f', 'x'])) {
             $this->addOperation("ALTER TABLE $table DROP CONSTRAINT IF EXISTS $constraint CASCADE;");
