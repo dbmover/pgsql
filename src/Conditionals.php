@@ -7,7 +7,7 @@
 
 namespace Dbmover\Pgsql;
 
-use Dbmover\Coore;
+use Dbmover\Core;
 
 /**
  * Gather all conditionals and optionally wrap them in a "lambda".
