@@ -18,11 +18,6 @@
             "Dbmover\\Pgsql\\": "src"
         }
     },
-    "autoload-dev": {
-        "psr-4": {
-            "Dbmover\\Pgsql\\Test\\": "tests"
-        }
-    },
     "require-dev": {
         "toast/unit": "^2.0",
         "gentry/gentry": "^0.13.10"
