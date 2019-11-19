@@ -13,9 +13,6 @@
         "php": ">=7.3",
         "dbmover/core": "^0.9.0"
     },
-    "require-dev": {
-        "gentry/gentry": "^0.13"
-    },
     "autoload": {
         "psr-4": {
             "Dbmover\\Pgsql\\": "src"
@@ -25,5 +22,9 @@
         "psr-4": {
             "Dbmover\\Pgsql\\Test\\": "tests"
         }
+    },
+    "require-dev": {
+        "toast/unit": "^2.0",
+        "gentry/gentry": "^0.13.10"
     }
 }
