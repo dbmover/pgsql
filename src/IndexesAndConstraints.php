@@ -107,9 +107,10 @@ class IndexesAndConstraints extends Core\IndexesAndConstraints
     /**
      * @param string $table
      * @param string $constraint
+     * @param string $type Not used here, but needed for contract.
      * @return void
      */
-    protected function dropConstraint(string $table, string $constraint) : void
+    protected function dropConstraint(string $table, string $constraint, string $type) : void
     {
         if (in_array($type, ['f', 'x'])) {
             $this->addOperation("ALTER TABLE $table DROP CONSTRAINT IF EXISTS $constraint CASCADE;");
