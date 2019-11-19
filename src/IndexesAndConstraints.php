@@ -44,6 +44,9 @@ class IndexesAndConstraints extends Core\IndexesAndConstraints
         foreach ($this->extractOperations("@^ALTER TABLE \S+ ADD FOREIGN KEY.*?;@ms", $sql) as $match) {
             $this->defer($match[0]);
         }
+        foreach ($this->extractOperations("@^ALTER TABLE \S+ ADD CONSTRAINT.*?;@ms", $sql) as $match) {
+            $this->defer($match[0]);
+        }
         return $sql;
     }
 
