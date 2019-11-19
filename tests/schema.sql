@@ -10,6 +10,8 @@ CREATE TABLE test (
 
 CREATE INDEX ON test(bar);
 
+ALTER TABLE test ADD CHECK (bar > 0);
+
 CREATE FUNCTION test_before_insert() RETURNS "trigger" AS $$
 BEGIN
     NEW.bar := NEW.bar + 1;
