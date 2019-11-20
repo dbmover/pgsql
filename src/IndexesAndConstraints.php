@@ -38,7 +38,7 @@ class IndexesAndConstraints extends Core\IndexesAndConstraints
         $stmt->execute();
         while (false !== ($constraint = $stmt->fetch(PDO::FETCH_ASSOC))) {
             if (!$this->loader->shouldBeIgnored($constraint['constr'])) {
-                $this->dropConstraint($constraint['tbl'], $constraint['constr']);
+                $this->dropConstraint($constraint['tbl'], $constraint['constr'], $constraint['ctype']);
             }
         }
         $sql = parent::__invoke($sql);
