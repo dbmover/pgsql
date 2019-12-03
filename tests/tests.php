@@ -6,18 +6,22 @@ use Dbmover\Core\Loader;
  * Tests for PostreSQL engine.
  */
 return function () : Generator {
-    $this->beforeEach(function () use (&$pdo) {
-        $pdo = new PDO(
-            'pgsql:dbname=dbmover_test',
-            'dbmover_test',
-            'moveit',
-            [
-                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-            ]
-        );
+    $pdo = new PDO(
+        'pgsql:dbname=dbmover_test',
+        'dbmover_test',
+        'moveit',
+        [
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+        ]
+    );
+    putenv("DBMOVER_VENDOR=Pgsql");
+
+    /** Initially, we have one table with three columns. After we run the migration, the database should be updated. */
+    yield function () use (&$pdo) {
         $pdo->exec(
             <<<EOT
 DROP VIEW IF EXISTS viewtest;
+DROP TABLE IF EXISTS test2;
 DROP TABLE IF EXISTS test;
 CREATE TABLE test (
     id SERIAL,
@@ -26,19 +30,12 @@ CREATE TABLE test (
 );
 EOT
         );
-        putenv("DBMOVER_VENDOR=Pgsql");
-    });
-
-    /**
-     * Initially, we have one table with three columns. After we run the migration, the database should be updated.
-     */
-    yield function () use (&$pdo) {
         $cols = $pdo->prepare(
             "SELECT * FROM INFORMATION_SCHEMA.COLUMNS
                 WHERE TABLE_CATALOG = 'dbmover_test'
                 AND TABLE_NAME = 'test'");
         $cols->execute();
-        assert(count($cols->fetchAll()) == 3);
+        assert(count($cols->fetchAll()) === 3);
 
         // Perform the migration...
         $pgsql = new Loader(
@@ -47,19 +44,33 @@ EOT
                 'user' => 'dbmover_test',
                 'pass' => 'moveit',
                 'schema' => ['tests/schema.sql'],
-                'plugins' => ['Dbmover\Core\ExplicitDrop', 'Dbmover\Core\ForceNamedIndexes', 'Dbmover\Pgsql\Plugin', 'Dbmover\Core\Data', 'Dbmover\Pgsql\Conditionals'],
+                'plugins' => [
+                    'Dbmover\Core\ExplicitDrop',
+                    'Dbmover\Core\ForceNamedIndexes',
+                    'Dbmover\Pgsql\Plugin',
+                    'Dbmover\Core\Data',
+                    'Dbmover\Pgsql\Conditionals',
+                ],
             ],
             true
         );
+        $sql = $pgsql->applyPlugins();
+        $pgsql->applyDeferred();
+        $pgsql->cleanup($sql);
 
         $cols->execute();
-        assert(count($cols->fetchAll()) == 4);
+        assert(count($cols->fetchAll()) === 4);
 
         $stmt = $pdo->prepare("SELECT * FROM viewtest");
         $stmt->execute();
         $all = $stmt->fetchAll();
-        assert(count($all) == 1);
-        assert($all[0]['bar'] == 3);
+        assert(count($all) === 1);
+        assert($all[0]['bar'] === 3);
+
+        $stmt = $pdo->prepare("SELECT * FROM test2");
+        $stmt->execute();
+        $all = $stmt->fetchAll();
+        assert(count($all) === 1);
 
         $e = 0;
         try {
@@ -67,6 +78,33 @@ EOT
         } catch (PDOException $e) {
         }
         assert($e instanceof PDOException);
+    };
+
+    /** When we re-run the migration, existing constraints/foreign keys should be left alone. */
+    yield function () use (&$pdo) {
+        // Perform the migration...
+        $pdo->exec("ALTER TABLE test2 ADD CHECK (test > -1)");
+        $pgsql = new Loader(
+            'pgsql:dbname=dbmover_test',
+            [
+                'user' => 'dbmover_test',
+                'pass' => 'moveit',
+                'schema' => ['tests/schema.sql'],
+                'plugins' => [
+                    'Dbmover\Core\ExplicitDrop',
+                    'Dbmover\Core\ForceNamedIndexes',
+                    'Dbmover\Pgsql\Plugin',
+                    'Dbmover\Core\Data',
+                    'Dbmover\Pgsql\Conditionals',
+                ],
+            ],
+            true
+        );
+        $pgsql->setDryMode(true);
+        $sql = $pgsql->applyPlugins();
+        $pgsql->applyDeferred();
+        $stmts = $pgsql->cleanup($sql);
+        assert(!in_array("ALTER TABLE test2 ADD FOREIGN KEY (test) REFERENCES test(id) ON DELETE RESTRICT;", $stmts));
     };
 };
 
