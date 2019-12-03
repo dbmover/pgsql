@@ -121,6 +121,7 @@ class IndexesAndConstraints extends Core\IndexesAndConstraints
 
     private function wantsFk(array $fk, array $fks) : bool
     {
+        unset($fk['constraint_name']);
         ksort($fk);
         foreach ($fks as $other) {
             unset($other[0]);
