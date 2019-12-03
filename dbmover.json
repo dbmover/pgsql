@@ -2,6 +2,7 @@
     "pgsql:dbname=dbmover_test": {
         "user": "dbmover_test",
         "pass": "moveit",
-        "schema": ["files/schema.pgsql.sql"]
+        "schema": ["tests/schema.sql"],
+        "plugins": ["Dbmover\\Core\\ExplicitDrop", "Dbmover\\Core\\ForceNamedIndexes", "Dbmover\\Pgsql\\Plugin", "Dbmover\\Core\\Data", "Dbmover\\Pgsql\\Conditionals"]
     }
 }
