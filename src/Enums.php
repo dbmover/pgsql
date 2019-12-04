@@ -8,8 +8,12 @@ use PDO;
 /**
  * Postgresql-specific enums plugin.
  */
-class Enums extends Core\Views
+class Enums extends Core\Plugin
 {
+    /** @var string */
+    const DESCRIPTION = 'Creating or updating types...';
+
+    /** @var PDOStatement */
     protected $columns;
 
     /**
@@ -33,7 +37,6 @@ class Enums extends Core\Views
      */
     public function __invoke(string $sql) : string
     {
-        $sql = parent::__invoke($sql);
         $stmt = $this->loader->getPdo()->prepare("SELECT e.enumlabel, typname
             FROM pg_enum e
             JOIN pg_type t ON e.enumtypid = t.oid
