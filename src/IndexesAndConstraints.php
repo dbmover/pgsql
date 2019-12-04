@@ -55,7 +55,7 @@ class IndexesAndConstraints extends Core\IndexesAndConstraints
         $sql = parent::__invoke($sql);
         // Get requested foreign keys:
         $requested_fks = [];
-        foreach ($this->extractOperations("@^ALTER TABLE (?'foreign_table'\S+) ADD FOREIGN KEY\s*\((?'fk_column'.*?)\) REFERENCES (?'primary_table'\S+)\((?'pk_column'\S+)\)( ON UPDATE (?'update_rule'RESTRICT|CASCADE|SET NULL))?( ON DELETE (?'delete_rule'RESTRICT|CASCADE|SET NULL))?;$@ms", $sql) as $match) {
+        foreach ($this->extractOperations("@^ALTER TABLE (?'foreign_table'\S+) ADD FOREIGN KEY\s*\((?'fk_column'.*?)\) REFERENCES (?'primary_table'\S+?)\s*\((?'pk_column'\S+?)\)( ON UPDATE (?'update_rule'RESTRICT|CASCADE|SET NULL))?( ON DELETE (?'delete_rule'RESTRICT|CASCADE|SET NULL))?;@ms", $sql) as $match) {
             foreach (['update_rule', 'delete_rule'] as $rule) {
                 if (!strlen($match[$rule])) {
                     $match[$rule] = 'NO ACTION';
