@@ -89,8 +89,7 @@ class IndexesAndConstraints extends Core\IndexesAndConstraints
             SELECT pgc.conname AS constraint_name,
                 ccu.table_schema AS table_schema,
                 ccu.table_name,
-                ccu.column_name,
-                pgc.consrc as definition
+                ccu.column_name
             FROM pg_constraint pgc
                 JOIN pg_namespace nsp on nsp.oid = pgc.connamespace
                 JOIN pg_class  cls on pgc.conrelid = cls.oid
