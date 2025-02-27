@@ -7,7 +7,7 @@ use Dbmover\Core\Loader;
  */
 return function () : Generator {
     $pdo = new PDO(
-        'pgsql:dbname=dbmover_test',
+        'pgsql:dbname=dbmover_test;host=localhost',
         'dbmover_test',
         'moveit',
         [
@@ -39,7 +39,7 @@ EOT
 
         // Perform the migration...
         $pgsql = new Loader(
-            'pgsql:dbname=dbmover_test',
+            'pgsql:dbname=dbmover_test;host=localhost',
             [
                 'user' => 'dbmover_test',
                 'pass' => 'moveit',
