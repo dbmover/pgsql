@@ -8,26 +8,26 @@
     "packages": [
         {
             "name": "dbmover/core",
-            "version": "0.9.4",
+            "version": "0.9.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dbmover/core.git",
-                "reference": "1fc9d0c2a0b8be9e8b8a176e1012915ddaed0939"
+                "reference": "d7ba3b41985770d476248ef273605330ff7582d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dbmover/core/zipball/1fc9d0c2a0b8be9e8b8a176e1012915ddaed0939",
-                "reference": "1fc9d0c2a0b8be9e8b8a176e1012915ddaed0939",
+                "url": "https://api.github.com/repos/dbmover/core/zipball/d7ba3b41985770d476248ef273605330ff7582d6",
+                "reference": "d7ba3b41985770d476248ef273605330ff7582d6",
                 "shasum": ""
             },
             "require": {
                 "monomelodies/kingconf": "^1.1",
-                "php": ">=7.2"
+                "php": ">=7.3"
             },
             "require-dev": {
                 "gentry/gentry": "^0.13.0",
                 "gentry/toast": "^0.1.0",
-                "toast/unit": "^1.3"
+                "toast/unit": "^2.0"
             },
             "bin": [
                 "bin/dbmover"
@@ -49,25 +49,29 @@
                 }
             ],
             "description": "PHP-based database versioning tool, core components",
-            "time": "2018-08-28T14:38:25+00:00"
+            "support": {
+                "issues": "https://github.com/dbmover/core/issues",
+                "source": "https://github.com/dbmover/core/tree/master"
+            },
+            "time": "2019-11-19T12:46:57+00:00"
         },
         {
             "name": "monomelodies/kingconf",
-            "version": "1.1.4",
+            "version": "1.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/monomelodies/kingconf.git",
-                "reference": "30c85dabb840ec5229e93fb010e1493c0278c959"
+                "reference": "6709a1b23cd906a2a16bf8780730a404ca769e63"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/monomelodies/kingconf/zipball/30c85dabb840ec5229e93fb010e1493c0278c959",
-                "reference": "30c85dabb840ec5229e93fb010e1493c0278c959",
+                "url": "https://api.github.com/repos/monomelodies/kingconf/zipball/6709a1b23cd906a2a16bf8780730a404ca769e63",
+                "reference": "6709a1b23cd906a2a16bf8780730a404ca769e63",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.2",
-                "symfony/yaml": "^2.8.9"
+                "symfony/yaml": "^4.3.0"
             },
             "require-dev": {
                 "phpunit/phpunit": ">=4"
@@ -99,41 +103,49 @@
                 "xml",
                 "yaml"
             ],
-            "time": "2018-07-18T07:30:47+00:00"
+            "support": {
+                "issues": "https://github.com/monomelodies/kingconf/issues",
+                "source": "https://github.com/monomelodies/kingconf/tree/master"
+            },
+            "time": "2019-06-06T13:16:02+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.9.0",
+            "version": "v1.31.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
-                "reference": "e3d826245268269cd66f8326bd8bc066687b4a19"
+                "reference": "a3cc8b044a6ea513310cbd48ef7333b384945638"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/e3d826245268269cd66f8326bd8bc066687b4a19",
-                "reference": "e3d826245268269cd66f8326bd8bc066687b4a19",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/a3cc8b044a6ea513310cbd48ef7333b384945638",
+                "reference": "a3cc8b044a6ea513310cbd48ef7333b384945638",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": ">=7.2"
+            },
+            "provide": {
+                "ext-ctype": "*"
             },
             "suggest": {
                 "ext-ctype": "For best performance"
             },
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-master": "1.9-dev"
+                "thanks": {
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Ctype\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Ctype\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -141,12 +153,12 @@
             ],
             "authors": [
                 {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                },
-                {
                     "name": "Gert de Pagter",
                     "email": "BackEndTea@gmail.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
                 }
             ],
             "description": "Symfony polyfill for ctype functions",
@@ -157,32 +169,53 @@
                 "polyfill",
                 "portable"
             ],
-            "time": "2018-08-06T14:22:27+00:00"
+            "support": {
+                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.31.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-09-09T11:45:10+00:00"
         },
         {
             "name": "symfony/yaml",
-            "version": "v2.8.45",
+            "version": "v4.4.45",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "fbf876678e29dc634430dcf0096e216eb0004467"
+                "reference": "aeccc4dc52a9e634f1d1eebeb21eacfdcff1053d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/fbf876678e29dc634430dcf0096e216eb0004467",
-                "reference": "fbf876678e29dc634430dcf0096e216eb0004467",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/aeccc4dc52a9e634f1d1eebeb21eacfdcff1053d",
+                "reference": "aeccc4dc52a9e634f1d1eebeb21eacfdcff1053d",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.9",
+                "php": ">=7.1.3",
                 "symfony/polyfill-ctype": "~1.8"
             },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.8-dev"
-                }
+            "conflict": {
+                "symfony/console": "<3.4"
             },
+            "require-dev": {
+                "symfony/console": "^3.4|^4.0|^5.0"
+            },
+            "suggest": {
+                "symfony/console": "For validating YAML files using the lint command"
+            },
+            "type": "library",
             "autoload": {
                 "psr-4": {
                     "Symfony\\Component\\Yaml\\": ""
@@ -205,9 +238,26 @@
                     "homepage": "https://symfony.com/contributors"
                 }
             ],
-            "description": "Symfony Yaml Component",
+            "description": "Loads and dumps YAML files",
             "homepage": "https://symfony.com",
-            "time": "2018-07-26T09:03:18+00:00"
+            "support": {
+                "source": "https://github.com/symfony/yaml/tree/v4.4.45"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-08-02T15:47:23+00:00"
         }
     ],
     "packages-dev": [
@@ -251,6 +301,10 @@
                 }
             ],
             "description": "PHP unit test generation tools",
+            "support": {
+                "issues": "https://github.com/gentry-php/gentry/issues",
+                "source": "https://github.com/gentry-php/gentry/tree/0.10.5"
+            },
             "time": "2016-10-09T14:45:24+00:00"
         },
         {
@@ -297,24 +351,31 @@
                 "colours",
                 "console"
             ],
+            "support": {
+                "issues": "https://github.com/SimonEast/Simple-Ansi-Colors/issues",
+                "source": "https://github.com/SimonEast/Simple-Ansi-Colors/tree/master"
+            },
             "time": "2015-11-24T03:03:27+00:00"
         },
         {
             "name": "zeptech/annotations",
-            "version": "1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pgraham/php-annotations.git",
-                "reference": "9cd042daa9ace184d04b49f0605edf73f19a9c71"
+                "reference": "a6fdc51f067cd2bc618bdc6d103edf65303693da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pgraham/php-annotations/zipball/9cd042daa9ace184d04b49f0605edf73f19a9c71",
-                "reference": "9cd042daa9ace184d04b49f0605edf73f19a9c71",
+                "url": "https://api.github.com/repos/pgraham/php-annotations/zipball/a6fdc51f067cd2bc618bdc6d103edf65303693da",
+                "reference": "a6fdc51f067cd2bc618bdc6d103edf65303693da",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9"
             },
             "type": "library",
             "autoload": {
@@ -324,12 +385,12 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "BSD"
+                "BSD-3-Clause"
             ],
             "authors": [
                 {
                     "name": "Philip Graham",
-                    "email": "philip@zeptech.ca"
+                    "email": "philip.robert.graham@gmail.com"
                 }
             ],
             "description": "DOC Block annotation parsing for PHP",
@@ -337,16 +398,21 @@
             "keywords": [
                 "annotations"
             ],
-            "time": "2013-05-29T02:35:23+00:00"
+            "support": {
+                "issues": "https://github.com/pgraham/php-annotations/issues",
+                "source": "https://github.com/pgraham/php-annotations/tree/1.2.0"
+            },
+            "time": "2022-03-19T17:19:13+00:00"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
         "php": ">=7.2"
     },
-    "platform-dev": []
+    "platform-dev": {},
+    "plugin-api-version": "2.6.0"
 }
