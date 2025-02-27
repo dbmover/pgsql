@@ -1,5 +1,5 @@
 {
-    "pgsql:dbname=dbmover_test": {
+    "pgsql:dbname=dbmover_test;host=localhost": {
         "user": "dbmover_test",
         "pass": "moveit",
         "schema": ["tests/schema.sql"],
