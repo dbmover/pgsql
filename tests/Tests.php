@@ -37,7 +37,7 @@ EOT
      * {?} and the inserted row has '3' for `bar` since a trigger was created
      * during the migration {?}.
      */
-    public function migrations(Schema &$pgsql = null)
+    public function migrations(?Schema &$pgsql = null)
     {
         $pgsql->__gentryConstruct(
             'pgsql:dbname=dbmover_test',
